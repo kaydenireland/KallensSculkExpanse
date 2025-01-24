@@ -1,0 +1,26 @@
+Future Features
+
+- Murky Mirror
+    - Item/tool that teleports the user back to their spawn point, similarly to a magic mirror in Terraria
+- Bells
+    - Item that makes sound, with pitch being dependent on the direction of the players vision
+- Echo Bell
+    - Highlights entities in a 30x20x30 range with the spectral effect
+- Warden Radar
+    - Warns players of their warden warning level, also known as shriek level, using sound and visual textures
+- Brewable Blindness Potion
+    - Echo shard as ingredient
+- Echo Geodes
+    - Geodes containing echo shards and variants tbd
+- Sculk Sniffer
+    - Can detect players in a certain radius, and can alert sculk sensors
+    - Goal is to prevent players from standing still for too long
+    - Slow cooldown
+- Sculk Radar
+    - Sends waves that can only travel over sculk, alerts sculk sensors if player makes contact with waves
+- Shrieze
+    - Flies in deep dark biomes
+    - Shoots player with projectile that "screeches", or makes noise upon impact, which alerts sculk sensors
+    - Very slow rate of fire
+    - Can drop screech charges which can be thrown and acts the same as the Shrieze projectile
+    - Can drop Shrieze rods, uses tbd
