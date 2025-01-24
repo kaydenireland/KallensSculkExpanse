@@ -1,18 +1,24 @@
 package net.kallen.kse.datagen;
 
+import net.kallen.kse.block.kseBlocks;
 import net.kallen.kse.kse;
 import net.minecraft.data.PackOutput;
 import net.minecraft.data.recipes.*;
+import net.minecraft.world.item.Items;
 import net.minecraft.world.item.crafting.AbstractCookingRecipe;
 import net.minecraft.world.item.crafting.Ingredient;
 import net.minecraft.world.item.crafting.RecipeSerializer;
 import net.minecraft.world.level.ItemLike;
+import net.minecraft.world.level.block.Blocks;
 import net.minecraftforge.common.crafting.conditions.IConditionBuilder;
 
 import java.util.List;
 import java.util.function.Consumer;
 
 public class kseRecipeProvider extends RecipeProvider implements IConditionBuilder {
+
+    private static final List<ItemLike> ECHO_SMELTABLES = List.of(kseBlocks.ECHO_ORE.get(), kseBlocks.DEEPSLATE_ECHO_ORE.get());
+
 
 
     public kseRecipeProvider(PackOutput pOutput) {
@@ -21,6 +27,20 @@ public class kseRecipeProvider extends RecipeProvider implements IConditionBuild
 
     @Override
     protected void buildRecipes(Consumer<FinishedRecipe> pWriter) {
+
+        oreSmelting(pWriter, ECHO_SMELTABLES, RecipeCategory.MISC, Items.ECHO_SHARD, 0.25f, 200, "_from_smelting");
+        oreBlasting(pWriter, ECHO_SMELTABLES, RecipeCategory.MISC, Items.ECHO_SHARD, 0.25f, 100, "_from_blasting");
+
+
+        threeByThreePacker(pWriter, RecipeCategory.BUILDING_BLOCKS, kseBlocks.ECHO_SHARD_BLOCK.get(), Items.ECHO_SHARD);
+        threeByThreeUnpacker(pWriter, Items.ECHO_SHARD, kseBlocks.ECHO_SHARD_BLOCK.get());
+
+        ShapelessRecipeBuilder.shapeless(RecipeCategory.MISC, kseBlocks.SCULKED_DEEPSLATE.get())
+                .requires(Blocks.COBBLED_DEEPSLATE)
+                .requires(Blocks.SCULK_VEIN)
+                .unlockedBy(getHasName(Blocks.COBBLED_DEEPSLATE), has(Blocks.COBBLED_DEEPSLATE))
+                .unlockedBy(getHasName(Blocks.SCULK_VEIN), has(Blocks.SCULK_VEIN))
+                .save(pWriter);
 
 
     }
@@ -40,6 +60,13 @@ public class kseRecipeProvider extends RecipeProvider implements IConditionBuild
                     .group(pGroup).unlockedBy(getHasName(itemlike), has(itemlike))
                     .save(pFinishedRecipeConsumer,  kse.MOD_ID + ":" + getItemName(pResult) + pRecipeName + "_" + getItemName(itemlike));
         }
+    }
+
+    protected static void threeByThreeUnpacker(Consumer<FinishedRecipe> pWriter, ItemLike pUnPacked, ItemLike pPacked){
+        ShapelessRecipeBuilder.shapeless(RecipeCategory.BUILDING_BLOCKS, pUnPacked, 9)
+                .requires(pPacked, 1)
+                .unlockedBy(getHasName(pPacked), has(pPacked))
+                .save(pWriter, pUnPacked + "_unpacked");
     }
 
     protected static void stonecutterResultFromBase(Consumer<FinishedRecipe> pFinishedRecipeConsumer, RecipeCategory pCategory, ItemLike pResult, ItemLike pMaterial) {

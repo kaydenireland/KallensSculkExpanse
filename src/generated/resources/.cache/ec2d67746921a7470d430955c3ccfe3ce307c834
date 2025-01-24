@@ -1,1 +1,13 @@
-// 1.20.1	2025-01-23T22:21:56.2901259	Block States: kse
+// 1.20.1	2025-01-23T23:35:00.378864	Block States: kse
+687c88851be2a8341c9f4c6932252a9f0f9761b2 assets/kse/blockstates/deepslate_echo_ore.json
+08b94e2bd72adc2bd6cd976b40b45d1be1f45c48 assets/kse/blockstates/echo_ore.json
+5cff1c0b263b8ece061b9a56bdc47d25649729f2 assets/kse/blockstates/echo_shard_block.json
+e943f76072c3cadd5828281be3c85741eecef957 assets/kse/blockstates/sculked_deepslate.json
+626dabdfccec805706981e3a249bcecfc69c9223 assets/kse/models/block/deepslate_echo_ore.json
+0aa09377c36478a93d8a61a2107e0e57aa5e0347 assets/kse/models/block/echo_ore.json
+3efa0b265bfe4b6a3647f286455d14ac5e512359 assets/kse/models/block/echo_shard_block.json
+e1413acf5b387bc574e8a80822ad919884dfa12c assets/kse/models/block/sculked_deepslate.json
+469b992c62febdd25d8650ab4e7534831161be9e assets/kse/models/item/deepslate_echo_ore.json
+cf804fcc7101cfeecca394844df28d79c599a4a5 assets/kse/models/item/echo_ore.json
+607e1f65d267ef52a83b07333dd3312d25a799b0 assets/kse/models/item/echo_shard_block.json
+4a24a50714a68599ad4090c4e453f86fe77ac03e assets/kse/models/item/sculked_deepslate.json

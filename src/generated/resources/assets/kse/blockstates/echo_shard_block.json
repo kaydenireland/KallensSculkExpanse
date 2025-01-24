@@ -1,0 +1,7 @@
+{
+  "variants": {
+    "": {
+      "model": "kse:block/echo_shard_block"
+    }
+  }
+}

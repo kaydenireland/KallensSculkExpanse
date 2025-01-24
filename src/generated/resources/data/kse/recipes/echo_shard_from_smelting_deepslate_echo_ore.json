@@ -1,0 +1,11 @@
+{
+  "type": "minecraft:smelting",
+  "category": "misc",
+  "cookingtime": 200,
+  "experience": 0.25,
+  "group": "_from_smelting",
+  "ingredient": {
+    "item": "kse:deepslate_echo_ore"
+  },
+  "result": "minecraft:echo_shard"
+}

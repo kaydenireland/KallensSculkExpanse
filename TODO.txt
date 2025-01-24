@@ -1,0 +1,4 @@
+TODO
+
+- retexture echo shard block
+- test echo ore gen rates

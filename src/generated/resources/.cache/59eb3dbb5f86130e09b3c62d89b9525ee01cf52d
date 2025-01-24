@@ -1,1 +1,5 @@
-// 1.20.1	2025-01-23T22:21:56.2871333	Loot Tables
+// 1.20.1	2025-01-23T23:35:00.3708851	Loot Tables
+c92b0c72fdc50057e8ee918902d4f7b469362773 data/kse/loot_tables/blocks/deepslate_echo_ore.json
+2f419fbc3820e728284b4c6fbe6366545a6b44f5 data/kse/loot_tables/blocks/echo_ore.json
+6c6a417460ab0a71d90168f8f1e7183d596d349a data/kse/loot_tables/blocks/echo_shard_block.json
+521fb736e334f96463ea6905b287ecf93de7d7a7 data/kse/loot_tables/blocks/sculked_deepslate.json

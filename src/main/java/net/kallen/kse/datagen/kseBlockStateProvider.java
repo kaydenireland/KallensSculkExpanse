@@ -1,5 +1,6 @@
 package net.kallen.kse.datagen;
 
+import net.kallen.kse.block.kseBlocks;
 import net.kallen.kse.kse;
 import net.minecraft.data.PackOutput;
 import net.minecraft.world.level.block.Block;
@@ -14,6 +15,13 @@ public class kseBlockStateProvider extends BlockStateProvider {
 
     @Override
     protected void registerStatesAndModels() {
+
+
+        blockWithItem(kseBlocks.ECHO_ORE);
+        blockWithItem(kseBlocks.DEEPSLATE_ECHO_ORE);
+        blockWithItem(kseBlocks.ECHO_SHARD_BLOCK);
+        blockWithItem(kseBlocks.SCULKED_DEEPSLATE);
+
 
     }
 

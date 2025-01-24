@@ -1,0 +1,10 @@
+Current Features
+
+- Echo Shard Block Family
+    - Echo and Deepslate Echo Ore
+        - Uncommon ore that spawns at y = 10 and below in deep dark biomes
+    - Echo Shard Block
+        - Compacted with 9 echo shards
+        - Can be unpacked
+- Sculked Deepslate
+    - Crafted with a sculk vein and cobbled deepslate

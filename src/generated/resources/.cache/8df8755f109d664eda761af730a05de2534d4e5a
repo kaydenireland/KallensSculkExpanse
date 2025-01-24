@@ -1,1 +1,3 @@
-// 1.20.1	2025-01-23T22:21:56.2891297	Tags for minecraft:block mod id kse
+// 1.20.1	2025-01-23T23:35:00.377867	Tags for minecraft:block mod id kse
+acd20985f2de95d000a3a482dfea0df2a9406237 data/minecraft/tags/blocks/mineable/pickaxe.json
+cfebd343c99a6a6f1191463f74e735cca5926a2d data/minecraft/tags/blocks/needs_iron_tool.json
