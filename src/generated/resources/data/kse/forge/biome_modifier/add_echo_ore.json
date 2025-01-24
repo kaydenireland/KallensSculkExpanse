@@ -1,6 +1,6 @@
 {
   "type": "forge:add_features",
-  "biomes": "#forge:is_spooky",
+  "biomes": "#minecraft:has_structure/ancient_city",
   "features": "kse:echo_ore_placed",
   "step": "underground_ores"
 }

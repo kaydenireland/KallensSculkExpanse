@@ -25,7 +25,7 @@ public class kseBiomeModifiers {
 
 
         context.register(ADD_ECHO_ORE, new ForgeBiomeModifiers.AddFeaturesBiomeModifier(
-                biomes.getOrThrow(Tags.Biomes.IS_SPOOKY),
+                biomes.getOrThrow(BiomeTags.HAS_ANCIENT_CITY),
                 HolderSet.direct(placedFeatures.getOrThrow(ksePlacedFeatures.ECHO_ORE_PLACED_KEY)),
                 GenerationStep.Decoration.UNDERGROUND_ORES));
 

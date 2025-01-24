@@ -1,6 +1,6 @@
-// 1.20.1	2025-01-24T00:52:55.7485794	Registries
+// 1.20.1	2025-01-24T14:54:16.4355672	Registries
 ebc69fec76a8e824345906868b3f0a2a88c92443 data/kse/forge/biome_modifier/add_deepslate_echo_ore.json
-52a4ab0bd2827f478ec23164c49352b6bb5250f2 data/kse/forge/biome_modifier/add_echo_ore.json
+3c956324720196c8122bd271a3808dca57d741e2 data/kse/forge/biome_modifier/add_echo_ore.json
 323824d1479be61d5fa0eb2f5ca721a180b080c8 data/kse/worldgen/configured_feature/deepslate_echo_ore_key.json
 7af4db3a00cd359a22f458bf3ced97c47db3b114 data/kse/worldgen/configured_feature/echo_ore_key.json
 99e8a8f912d4eb21136c01342fa3b1ae8f980590 data/kse/worldgen/placed_feature/deepslate_echo_ore_placed.json

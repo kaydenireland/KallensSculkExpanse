@@ -1,5 +1,4 @@
 TODO
 
-- retexture echo shard block, sculked deepslate
+- retexture echo shard block
 - test echo ore gen rates
-- create biome tag with only deep dark for echo ore gen
