@@ -4,6 +4,7 @@ import net.kallen.kse.block.kseBlocks;
 import net.minecraft.data.loot.BlockLootSubProvider;
 import net.minecraft.world.flag.FeatureFlags;
 import net.minecraft.world.item.Item;
+import net.minecraft.world.item.Items;
 import net.minecraft.world.item.enchantment.Enchantments;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.storage.loot.LootTable;
@@ -23,13 +24,23 @@ public class kseBlockLootTables extends BlockLootSubProvider {
     @Override
     protected void generate() {
 
+        this.add(kseBlocks.ECHO_ORE.get(),
+                block -> createEchoOreDrops(kseBlocks.ECHO_ORE.get(), Items.ECHO_SHARD));
+        this.add(kseBlocks.DEEPSLATE_ECHO_ORE.get(),
+                block -> createEchoOreDrops(kseBlocks.DEEPSLATE_ECHO_ORE.get(), Items.ECHO_SHARD));
+
+
+        this.dropSelf(kseBlocks.ECHO_SHARD_BLOCK.get());
+        this.dropSelf(kseBlocks.SCULKED_DEEPSLATE.get());
+
+
     }
 
-    protected LootTable.Builder createCopperLikeOreDrops(Block pBlock, Item item) {
+    protected LootTable.Builder createEchoOreDrops(Block pBlock, Item item) {
         return createSilkTouchDispatchTable(pBlock,
                 this.applyExplosionDecay(pBlock,
                         LootItem.lootTableItem(item)
-                                .apply(SetItemCountFunction.setCount(UniformGenerator.between(2.0F, 5.0F)))
+                                .apply(SetItemCountFunction.setCount(UniformGenerator.between(1.0F, 3.0F)))
                                 .apply(ApplyBonusCount.addOreBonusCount(Enchantments.BLOCK_FORTUNE))));
     }
 
