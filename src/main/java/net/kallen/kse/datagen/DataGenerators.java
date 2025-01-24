@@ -29,5 +29,7 @@ public class DataGenerators {
         kseBlockTagGenerator blockTagGenerator = generator.addProvider(event.includeServer(),
                 new kseBlockTagGenerator(packOutput, lookupProvider, existingFileHelper));
         generator.addProvider(event.includeServer(), new kseItemTagGenerator(packOutput, lookupProvider, blockTagGenerator.contentsGetter(), existingFileHelper));
+
+        generator.addProvider(event.includeServer(), new kseWorldGenProvider(packOutput, lookupProvider));
     }
 }
