@@ -53,6 +53,26 @@ public class kseRecipeProvider extends RecipeProvider implements IConditionBuild
                 .unlockedBy(getHasName(Items.IRON_NUGGET), has(Items.IRON_NUGGET))
                 .save(pWriter);
 
+        ShapedRecipeBuilder.shaped(RecipeCategory.BUILDING_BLOCKS, kseItems.AMETHYST_BELL.get())
+                .pattern("AAA")
+                .pattern("ABA")
+                .pattern("AAA")
+                .define('A', Items.AMETHYST_SHARD)
+                .define('B', kseItems.IRON_BELL.get())
+                .unlockedBy(getHasName(Items.AMETHYST_SHARD), has(Items.AMETHYST_SHARD))
+                .unlockedBy(getHasName(kseItems.IRON_BELL.get()), has(kseItems.IRON_BELL.get()))
+                .save(pWriter);
+
+        ShapedRecipeBuilder.shaped(RecipeCategory.BUILDING_BLOCKS, kseItems.GLOW_BELL.get())
+                .pattern("AAA")
+                .pattern("ABA")
+                .pattern("AAA")
+                .define('A', Items.GLOWSTONE)
+                .define('B', kseItems.IRON_BELL.get())
+                .unlockedBy(getHasName(Items.GLOWSTONE), has(Items.GLOWSTONE))
+                .unlockedBy(getHasName(kseItems.IRON_BELL.get()), has(kseItems.IRON_BELL.get()))
+                .save(pWriter);
+
         ShapedRecipeBuilder.shaped(RecipeCategory.BUILDING_BLOCKS, kseItems.ECHO_BELL.get())
                 .pattern("AAA")
                 .pattern("ABA")

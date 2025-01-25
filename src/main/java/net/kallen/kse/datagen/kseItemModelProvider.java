@@ -19,6 +19,8 @@ public class kseItemModelProvider extends ItemModelProvider {
     protected void registerModels() {
 
         simpleItem(kseItems.IRON_BELL);
+        simpleItem(kseItems.AMETHYST_BELL);
+        simpleItem(kseItems.GLOW_BELL);
         simpleItem(kseItems.ECHO_BELL);
 
 

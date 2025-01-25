@@ -19,6 +19,8 @@ public class kseItems {
 
 
     public static final RegistryObject<Item> IRON_BELL = ITEMS.register("iron_bell", () -> new BellItem(new Item.Properties()));
+    public static final RegistryObject<Item> AMETHYST_BELL = ITEMS.register("amethyst_bell", () -> new AmethystBellItem(new Item.Properties()));
+    public static final RegistryObject<Item> GLOW_BELL = ITEMS.register("glow_bell", () -> new GlowBellItem(new Item.Properties()));
     public static final RegistryObject<Item> ECHO_BELL = ITEMS.register("echo_bell", () -> new EchoBellItem(new Item.Properties()));
 
 

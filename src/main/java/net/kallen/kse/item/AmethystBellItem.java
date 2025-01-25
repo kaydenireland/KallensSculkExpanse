@@ -8,8 +8,8 @@ import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.level.Level;
 
-public class EchoBellItem extends BellItem {
-    public EchoBellItem(Properties pProperties) {
+public class AmethystBellItem extends BellItem {
+    public AmethystBellItem(Properties pProperties) {
         super(pProperties);
     }
 
@@ -21,7 +21,7 @@ public class EchoBellItem extends BellItem {
         ItemStack itemInHand = pPlayer.getItemInHand(pUsedHand);
         if (pLevel.isClientSide) {
 
-            pPlayer.addEffect(new MobEffectInstance(MobEffect.byId(23), 400));
+            pPlayer.removeAllEffects();
 
         }
 
