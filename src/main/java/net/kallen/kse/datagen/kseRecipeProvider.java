@@ -1,6 +1,7 @@
 package net.kallen.kse.datagen;
 
 import net.kallen.kse.block.kseBlocks;
+import net.kallen.kse.item.kseItems;
 import net.kallen.kse.kse;
 import net.minecraft.data.PackOutput;
 import net.minecraft.data.recipes.*;
@@ -40,6 +41,16 @@ public class kseRecipeProvider extends RecipeProvider implements IConditionBuild
                 .requires(Blocks.SCULK_VEIN)
                 .unlockedBy(getHasName(Blocks.COBBLED_DEEPSLATE), has(Blocks.COBBLED_DEEPSLATE))
                 .unlockedBy(getHasName(Blocks.SCULK_VEIN), has(Blocks.SCULK_VEIN))
+                .save(pWriter);
+
+        ShapedRecipeBuilder.shaped(RecipeCategory.BUILDING_BLOCKS, kseItems.IRON_BELL.get())
+                .pattern(" A ")
+                .pattern("ABA")
+                .pattern("A A")
+                .define('A', Items.IRON_INGOT)
+                .define('B', Items.IRON_NUGGET)
+                .unlockedBy(getHasName(Items.IRON_INGOT), has(Items.IRON_INGOT))
+                .unlockedBy(getHasName(Items.IRON_NUGGET), has(Items.IRON_NUGGET))
                 .save(pWriter);
 
 

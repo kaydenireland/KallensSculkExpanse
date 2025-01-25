@@ -33,6 +33,7 @@ public class kseCreativeModeTabs {
                         output.accept(kseBlocks.DEEPSLATE_ECHO_ORE.get());
                         output.accept(kseBlocks.ECHO_SHARD_BLOCK.get());
                         output.accept(kseBlocks.SCULKED_DEEPSLATE.get());
+                        output.accept(kseItems.IRON_BELL.get());
 
 
 
