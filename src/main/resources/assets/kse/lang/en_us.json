@@ -7,5 +7,6 @@
   "block.kse.echo_shard_block": "Echo Shard Block",
   "block.kse.sculked_deepslate": "Sculked Deepslate",
 
-  "item.kse.iron_bell": "Iron Bell"
+  "item.kse.iron_bell": "Iron Bell",
+  "item.kse.echo_bell": "Echo Bell"
 }

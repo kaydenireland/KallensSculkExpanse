@@ -12,7 +12,7 @@ import net.minecraft.world.level.Level;
 
 public class BellItem extends Item {
     public BellItem(Properties pProperties) {
-        super(pProperties);
+        super(pProperties.stacksTo(1));
     }
 
 
@@ -66,6 +66,7 @@ public class BellItem extends Item {
     public UseAnim getUseAnimation(ItemStack pStack) {
         return UseAnim.EAT;
     }
+
 
 
 
