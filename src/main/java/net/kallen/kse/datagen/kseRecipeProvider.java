@@ -53,6 +53,16 @@ public class kseRecipeProvider extends RecipeProvider implements IConditionBuild
                 .unlockedBy(getHasName(Items.IRON_NUGGET), has(Items.IRON_NUGGET))
                 .save(pWriter);
 
+        ShapedRecipeBuilder.shaped(RecipeCategory.BUILDING_BLOCKS, Items.EXPERIENCE_BOTTLE)
+                .pattern("AAA")
+                .pattern("ABA")
+                .pattern("AAA")
+                .define('A', Blocks.SCULK)
+                .define('B', Items.GLASS_BOTTLE)
+                .unlockedBy(getHasName(Blocks.SCULK), has(Blocks.SCULK))
+                .unlockedBy(getHasName(Items.GLASS_BOTTLE), has(Items.GLASS_BOTTLE))
+                .save(pWriter);
+
 
     }
 
