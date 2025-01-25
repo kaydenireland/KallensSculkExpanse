@@ -23,8 +23,6 @@ public class BellItem extends Item {
         ItemStack itemInHand = pPlayer.getItemInHand(pUsedHand);
         if (pLevel.isClientSide) {
 
-
-
             if(pPlayer.getXRot() < -30){
 
                 if(pPlayer.isCrouching()){
@@ -58,13 +56,10 @@ public class BellItem extends Item {
             }
 
 
-
-
-
         }
 
 
-        return InteractionResultHolder.consume(itemInHand);
+        return InteractionResultHolder.pass(itemInHand);
     }
 
     @Override
