@@ -11,6 +11,7 @@ public class DecreaseWardenWarningCommand {
 
     public DecreaseWardenWarningCommand(CommandDispatcher<CommandSourceStack> dispatcher){
         dispatcher.register(Commands.literal("warden")
+                .requires(commandSourceStack -> commandSourceStack.hasPermission(2))
                 .then(Commands.literal("warning")
                 .then(Commands.literal("decrease")
                         .executes(this::execute))));

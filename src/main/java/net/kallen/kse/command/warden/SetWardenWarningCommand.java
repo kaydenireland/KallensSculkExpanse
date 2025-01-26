@@ -14,6 +14,7 @@ public class SetWardenWarningCommand {
 
     public SetWardenWarningCommand(CommandDispatcher<CommandSourceStack> dispatcher){
         dispatcher.register(Commands.literal("warden")
+                .requires(commandSourceStack -> commandSourceStack.hasPermission(2))
                 .then(Commands.literal("warning")
                 .then(Commands.literal("set")
                 .then(Commands.argument("level", IntegerArgumentType.integer(0,4))

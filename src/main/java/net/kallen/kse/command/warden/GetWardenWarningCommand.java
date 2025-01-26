@@ -11,6 +11,7 @@ public class GetWardenWarningCommand {
 
     public GetWardenWarningCommand(CommandDispatcher<CommandSourceStack> dispatcher){
         dispatcher.register(Commands.literal("warden")
+                .requires(commandSourceStack -> commandSourceStack.hasPermission(2))
                 .then(Commands.literal("warning")
                 .then(Commands.literal("get")
                         .executes(this::execute))));
