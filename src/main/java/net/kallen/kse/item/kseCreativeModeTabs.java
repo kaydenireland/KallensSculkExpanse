@@ -23,7 +23,7 @@ public class kseCreativeModeTabs {
 
 
     ///////////// Creative Mode Tabs
-    public static final RegistryObject<CreativeModeTab> AUTUMN_ROSE_ITEMS = CREATIVE_MODE_TABS.register("kse",
+    public static final RegistryObject<CreativeModeTab> KSE_ITEMS = CREATIVE_MODE_TABS.register("kse",
             () -> CreativeModeTab.builder().icon(() ->  new ItemStack(kseBlocks.ECHO_ORE.get()))
                     .title(Component.translatable("creativetab.kse"))
                     .displayItems((itemDisplayParameters, output) -> {
