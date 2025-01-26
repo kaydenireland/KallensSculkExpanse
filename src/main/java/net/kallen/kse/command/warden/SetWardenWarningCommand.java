@@ -1,6 +1,7 @@
 package net.kallen.kse.command.warden;
 
 import com.mojang.brigadier.CommandDispatcher;
+import com.mojang.brigadier.arguments.IntegerArgumentType;
 import com.mojang.brigadier.context.CommandContext;
 import net.minecraft.commands.CommandSourceStack;
 import net.minecraft.commands.Commands;
@@ -15,18 +16,20 @@ public class SetWardenWarningCommand {
         dispatcher.register(Commands.literal("warden")
                 .then(Commands.literal("warning")
                 .then(Commands.literal("set")
-                        .executes(this::execute))));
+                .then(Commands.argument("level", IntegerArgumentType.integer(0,4))
+                        .executes(commandContext -> execute(commandContext, IntegerArgumentType.getInteger(commandContext, "level")))))));
     }
 
-    private int execute(CommandContext<CommandSourceStack> context) {
+    private int execute(CommandContext<CommandSourceStack> context, int setWarningLevel) {
 
+        System.out.println(context.getLastChild());
         ServerPlayer player = context.getSource().getPlayer();
         assert player != null;
-        int warningLevel = player.getWardenSpawnTracker().get().getWarningLevel();
 
 
-        context.getSource().sendSuccess(() -> Component.literal("Work In Progress"),
-                true);
+        player.getWardenSpawnTracker().get().setWarningLevel(setWarningLevel);
+        context.getSource().sendSuccess(() -> Component.literal("Warning Level Set to " + setWarningLevel), true);
+
 
         return 1;
 
