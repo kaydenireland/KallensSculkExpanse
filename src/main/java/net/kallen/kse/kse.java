@@ -4,6 +4,7 @@ import com.mojang.logging.LogUtils;
 import net.kallen.kse.block.kseBlocks;
 import net.kallen.kse.item.kseCreativeModeTabs;
 import net.kallen.kse.item.kseItems;
+import net.kallen.kse.loot.kseLootModifiers;
 import net.minecraftforge.api.distmarker.Dist;
 import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.event.BuildCreativeModeTabContentsEvent;
@@ -24,16 +25,19 @@ public class kse {
     
 
     public kse(FMLJavaModLoadingContext context){
-        IEventBus modEventBus = context.getModEventBus();
+        IEventBus kseEventBus = context.getModEventBus();
 
-        kseItems.register(modEventBus);
-        kseBlocks.register(modEventBus);
-        kseCreativeModeTabs.register((modEventBus));
+        kseItems.register(kseEventBus);
+        kseBlocks.register(kseEventBus);
+        kseCreativeModeTabs.register((kseEventBus));
 
-        modEventBus.addListener(this::commonSetup);
+        kseEventBus.addListener(this::commonSetup);
 
         MinecraftForge.EVENT_BUS.register(this);
-        modEventBus.addListener(this::addCreative);
+
+        kseLootModifiers.register(kseEventBus);
+
+        kseEventBus.addListener(this::addCreative);
     }
 
     private void commonSetup(final FMLCommonSetupEvent event){

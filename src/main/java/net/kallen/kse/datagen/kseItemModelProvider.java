@@ -22,6 +22,7 @@ public class kseItemModelProvider extends ItemModelProvider {
         simpleItem(kseItems.AMETHYST_BELL);
         simpleItem(kseItems.GLOW_BELL);
         simpleItem(kseItems.ECHO_BELL);
+        simpleItem(kseItems.WARDEN_TOTEM);
 
 
     }

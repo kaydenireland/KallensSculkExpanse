@@ -1,5 +1,6 @@
 package net.kallen.kse.datagen;
 
+import net.kallen.kse.datagen.loot.kseGlobalLootModifierProvider;
 import net.kallen.kse.kse;
 import net.minecraft.core.HolderLookup;
 import net.minecraft.data.DataGenerator;
@@ -22,6 +23,7 @@ public class DataGenerators {
 
         generator.addProvider(event.includeServer(), new kseRecipeProvider(packOutput));
         generator.addProvider(event.includeServer(), kseLootTableProvider.create(packOutput));
+        generator.addProvider(event.includeServer(), new kseGlobalLootModifierProvider(packOutput));
 
         generator.addProvider(event.includeClient(), new kseBlockStateProvider(packOutput, existingFileHelper));
         generator.addProvider(event.includeClient(), new kseItemModelProvider(packOutput, existingFileHelper));
