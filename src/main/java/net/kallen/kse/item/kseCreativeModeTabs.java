@@ -37,6 +37,8 @@ public class kseCreativeModeTabs {
                         output.accept(kseItems.AMETHYST_BELL.get());
                         output.accept(kseItems.GLOW_BELL.get());
                         output.accept(kseItems.ECHO_BELL.get());
+                        output.accept(kseItems.WARDEN_TOTEM.get());
+                        output.accept(kseItems.MURKY_MIRROR.get());
 
 
 

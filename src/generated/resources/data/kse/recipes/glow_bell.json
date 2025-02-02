@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "building",
+  "key": {
+    "A": {
+      "item": "minecraft:glowstone"
+    },
+    "B": {
+      "item": "kse:iron_bell"
+    }
+  },
+  "pattern": [
+    "AAA",
+    "ABA",
+    "AAA"
+  ],
+  "result": {
+    "item": "kse:glow_bell"
+  },
+  "show_notification": true
+}

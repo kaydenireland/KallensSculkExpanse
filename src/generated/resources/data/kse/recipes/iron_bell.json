@@ -11,8 +11,8 @@
   },
   "pattern": [
     " A ",
-    "ABA",
-    "A A"
+    "A A",
+    "ABA"
   ],
   "result": {
     "item": "kse:iron_bell"
