@@ -23,6 +23,10 @@ public class kseGlobalLootModifierProvider extends GlobalLootModifierProvider {
                 new LootTableIdCondition.Builder(new ResourceLocation("entities/warden")).build(),
                 LootItemRandomChanceCondition.randomChance(1.0f).build()}, kseItems.WARDEN_TOTEM.get()));
 
+        add("murky_mirror_from_ancient_city", new AddItemModifier(new LootItemCondition[] {
+                new LootTableIdCondition.Builder(new ResourceLocation("chests/ancient_city")).build(),
+                LootItemRandomChanceCondition.randomChance(.2f).build()}, kseItems.MURKY_MIRROR.get()));
+
 
     }
 }

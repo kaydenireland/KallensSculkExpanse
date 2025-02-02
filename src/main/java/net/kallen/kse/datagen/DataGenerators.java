@@ -1,6 +1,7 @@
 package net.kallen.kse.datagen;
 
 import net.kallen.kse.datagen.loot.kseGlobalLootModifierProvider;
+import net.kallen.kse.datagen.loot.kseLootTableProvider;
 import net.kallen.kse.kse;
 import net.minecraft.core.HolderLookup;
 import net.minecraft.data.DataGenerator;

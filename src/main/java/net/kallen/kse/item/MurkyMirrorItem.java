@@ -13,7 +13,7 @@ import net.minecraft.world.level.Level;
 
 public class MurkyMirrorItem extends Item {
     public MurkyMirrorItem(Properties pProperties) {
-        super(pProperties);
+        super(pProperties.stacksTo(1));
     }
 
     @Override
@@ -24,7 +24,7 @@ public class MurkyMirrorItem extends Item {
             BlockPos spawnPos = serverPlayer.getRespawnPosition();
             if (spawnPos != null) {
                 // Teleport the player safely
-                serverPlayer.teleportTo(spawnPos.getX() + 0.5, spawnPos.getY(), spawnPos.getZ() + 0.5);
+                serverPlayer.teleportTo(spawnPos.getX() + 0.5, spawnPos.getY() + 0.5, spawnPos.getZ() + 0.5);
 
                 // Play a sound effect
                 pLevel.playSound(null, serverPlayer.blockPosition(), SoundEvents.ENDERMAN_TELEPORT, SoundSource.PLAYERS, 1.0F, 1.0F);
