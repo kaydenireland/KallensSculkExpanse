@@ -1,0 +1,50 @@
+{
+  "amethyst_bell": {
+    "subtitle": "sounds.kse.amethyst_bell",
+    "sounds": [
+      "kse:item/bell/amethyst_bell"
+    ]
+  },"glow_bell": {
+    "subtitle": "sounds.kse.glow_bell",
+    "sounds": [
+      "kse:item/bell/glow_bell"
+    ]
+  },"echo_bell": {
+    "subtitle": "sounds.kse.echo_bell",
+    "sounds": [
+      "kse:item/bell/echo_bell"
+    ]
+  },
+
+  "bell_up": {
+    "subtitle": "sounds.kse.bell",
+    "sounds": [
+      "kse:item/bell/bell_up"
+    ]
+  },"bell_up_sneak": {
+    "subtitle": "sounds.kse.bell",
+    "sounds": [
+      "kse:item/bell/bell_up_sneak"
+    ]
+  },"bell_straight": {
+    "subtitle": "sounds.kse.bell",
+    "sounds": [
+      "kse:item/bell/bell_straight"
+    ]
+  },"bell_straight_sneak": {
+    "subtitle": "sounds.kse.bell",
+    "sounds": [
+      "kse:item/bell/bell_straight_sneak"
+    ]
+  },"bell_down": {
+    "subtitle": "sounds.kse.bell",
+    "sounds": [
+      "kse:item/bell/bell_down"
+    ]
+  },"bell_down_sneak": {
+    "subtitle": "sounds.kse.bell",
+    "sounds": [
+      "kse:item/bell/bell_down_sneak"
+    ]
+  }
+}

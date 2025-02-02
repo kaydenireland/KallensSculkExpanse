@@ -13,5 +13,12 @@
   "item.kse.echo_bell": "Echo Bell",
 
   "item.kse.warden_totem": "Warden Totem",
-  "item.kse.murky_mirror": "Murky Mirror"
+  "item.kse.murky_mirror": "Murky Mirror",
+
+
+  "sounds.kse.amethyst_bell": "Amethyst Bell Rings",
+  "sounds.kse.glow_bell": "Glow Bell Rings",
+  "sounds.kse.echo_bell": "Echo Bell Rings",
+
+  "sounds.kse.bell": "Bell Rings"
 }

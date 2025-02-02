@@ -45,8 +45,8 @@ public class kseRecipeProvider extends RecipeProvider implements IConditionBuild
 
         ShapedRecipeBuilder.shaped(RecipeCategory.BUILDING_BLOCKS, kseItems.IRON_BELL.get())
                 .pattern(" A ")
-                .pattern("ABA")
                 .pattern("A A")
+                .pattern("ABA")
                 .define('A', Items.IRON_INGOT)
                 .define('B', Items.IRON_NUGGET)
                 .unlockedBy(getHasName(Items.IRON_INGOT), has(Items.IRON_INGOT))

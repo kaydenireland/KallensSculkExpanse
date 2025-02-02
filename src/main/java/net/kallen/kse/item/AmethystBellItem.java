@@ -1,6 +1,8 @@
 package net.kallen.kse.item;
 
+import net.kallen.kse.sound.kseSounds;
 import net.minecraft.client.Minecraft;
+import net.minecraft.sounds.SoundSource;
 import net.minecraft.world.InteractionHand;
 import net.minecraft.world.InteractionResultHolder;
 import net.minecraft.world.effect.MobEffect;
@@ -25,6 +27,9 @@ public class AmethystBellItem extends BellItem {
             pPlayer.removeAllEffects();
             pPlayer.getCooldowns().addCooldown(this, 12000);
 
+            pLevel.playSound(null, pPlayer.getX(), pPlayer.getY(), pPlayer.getZ(),
+                    kseSounds.AMETHYST_BELL.get(),
+                    SoundSource.PLAYERS, 1.0F, 1.0F);
 
         }
 

@@ -3,19 +3,19 @@
   "category": "building",
   "key": {
     "A": {
-      "item": "minecraft:iron_ingot"
+      "item": "minecraft:glowstone"
     },
     "B": {
-      "item": "minecraft:iron_nugget"
+      "item": "kse:iron_bell"
     }
   },
   "pattern": [
-    " A ",
-    "A A",
-    "ABA"
+    "AAA",
+    "ABA",
+    "AAA"
   ],
   "result": {
-    "item": "kse:iron_bell"
+    "item": "kse:glow_bell"
   },
   "show_notification": true
 }

@@ -3,19 +3,19 @@
   "category": "building",
   "key": {
     "A": {
-      "item": "minecraft:iron_ingot"
+      "item": "minecraft:amethyst_shard"
     },
     "B": {
-      "item": "minecraft:iron_nugget"
+      "item": "kse:iron_bell"
     }
   },
   "pattern": [
-    " A ",
-    "A A",
-    "ABA"
+    "AAA",
+    "ABA",
+    "AAA"
   ],
   "result": {
-    "item": "kse:iron_bell"
+    "item": "kse:amethyst_bell"
   },
   "show_notification": true
 }

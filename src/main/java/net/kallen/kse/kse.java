@@ -6,6 +6,7 @@ import net.kallen.kse.event.WardenWarningListener;
 import net.kallen.kse.item.kseCreativeModeTabs;
 import net.kallen.kse.item.kseItems;
 import net.kallen.kse.loot.kseLootModifiers;
+import net.kallen.kse.sound.kseSounds;
 import net.minecraftforge.api.distmarker.Dist;
 import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.event.BuildCreativeModeTabContentsEvent;
@@ -31,6 +32,8 @@ public class kse {
         kseItems.register(kseEventBus);
         kseBlocks.register(kseEventBus);
         kseCreativeModeTabs.register((kseEventBus));
+
+        kseSounds.register(kseEventBus);
 
         kseEventBus.addListener(this::commonSetup);
 

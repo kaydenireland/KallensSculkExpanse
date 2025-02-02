@@ -1,5 +1,7 @@
 package net.kallen.kse.item;
 
+import net.kallen.kse.sound.kseSounds;
+import net.minecraft.sounds.SoundSource;
 import net.minecraft.world.InteractionHand;
 import net.minecraft.world.InteractionResultHolder;
 import net.minecraft.world.effect.MobEffect;
@@ -38,6 +40,10 @@ public class EchoBellItem extends BellItem {
                     livingEntity.addEffect(new MobEffectInstance(MobEffects.GLOWING, 400));
                 }
             }
+
+            pLevel.playSound(null, pPlayer.getX(), pPlayer.getY(), pPlayer.getZ(),
+                    kseSounds.ECHO_BELL.get(),
+                    SoundSource.PLAYERS, 1.0F, 1.0F);
 
             pPlayer.getCooldowns().addCooldown(this, 12000);
 

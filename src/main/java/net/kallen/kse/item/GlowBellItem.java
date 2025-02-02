@@ -1,5 +1,6 @@
 package net.kallen.kse.item;
 
+import net.kallen.kse.sound.kseSounds;
 import net.minecraft.server.level.ServerPlayer;
 import net.minecraft.sounds.SoundEvents;
 import net.minecraft.sounds.SoundSource;
@@ -32,7 +33,7 @@ public class GlowBellItem extends BellItem {
             pPlayer.getCooldowns().addCooldown(this, 6000);
 
             pLevel.playSound(null, pPlayer.getX(), pPlayer.getY(), pPlayer.getZ(),
-                    SoundEvents.BELL_BLOCK,
+                    kseSounds.GLOW_BELL.get(),
                     SoundSource.PLAYERS, 1.0F, 1.0F);
 
         }

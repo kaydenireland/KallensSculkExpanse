@@ -1,5 +1,6 @@
 package net.kallen.kse.item;
 
+import net.kallen.kse.sound.kseSounds;
 import net.minecraft.sounds.SoundEvents;
 import net.minecraft.sounds.SoundSource;
 import net.minecraft.world.InteractionHand;
@@ -26,30 +27,30 @@ public class BellItem extends Item {
             if(pPlayer.getXRot() < -30){
 
                 if(pPlayer.isCrouching()){
-                    pLevel.playSound(pPlayer, pPlayer.blockPosition(), SoundEvents.WITHER_SHOOT, SoundSource.PLAYERS,
+                    pLevel.playSound(pPlayer, pPlayer.blockPosition(), kseSounds.BELL_UP_SNEAK.get(), SoundSource.PLAYERS,
                             .5f, 1);
                 }else{
-                    pLevel.playSound(pPlayer, pPlayer.blockPosition(), SoundEvents.WITHER_HURT, SoundSource.PLAYERS,
+                    pLevel.playSound(pPlayer, pPlayer.blockPosition(), kseSounds.BELL_UP.get(), SoundSource.PLAYERS,
                             .5f, 1);
                 }
 
             }else if(pPlayer.getXRot() > 30){
 
                 if(pPlayer.isCrouching()){
-                    pLevel.playSound(pPlayer, pPlayer.blockPosition(), SoundEvents.COW_AMBIENT, SoundSource.PLAYERS,
+                    pLevel.playSound(pPlayer, pPlayer.blockPosition(), kseSounds.BELL_DOWN_SNEAK.get(), SoundSource.PLAYERS,
                             .5f, 1);
                 }else{
-                    pLevel.playSound(pPlayer, pPlayer.blockPosition(), SoundEvents.COW_DEATH, SoundSource.PLAYERS,
+                    pLevel.playSound(pPlayer, pPlayer.blockPosition(), kseSounds.BELL_DOWN.get(), SoundSource.PLAYERS,
                             .5f, 1);
                 }
 
             }else{
 
                 if(pPlayer.isCrouching()){
-                    pLevel.playSound(pPlayer, pPlayer.blockPosition(), SoundEvents.PIG_AMBIENT, SoundSource.PLAYERS,
+                    pLevel.playSound(pPlayer, pPlayer.blockPosition(), kseSounds.BELL_STRAIGHT_SNEAK.get(), SoundSource.PLAYERS,
                             .5f, 1);
                 }else{
-                    pLevel.playSound(pPlayer, pPlayer.blockPosition(), SoundEvents.PIG_DEATH, SoundSource.PLAYERS,
+                    pLevel.playSound(pPlayer, pPlayer.blockPosition(), kseSounds.BELL_STRAIGHT.get(), SoundSource.PLAYERS,
                             .5f, 1);
                 }
 
