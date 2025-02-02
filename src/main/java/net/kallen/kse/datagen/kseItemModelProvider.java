@@ -1,6 +1,7 @@
 package net.kallen.kse.datagen;
 
 import net.kallen.kse.kse;
+import net.kallen.kse.item.kseItems;
 import net.minecraft.data.PackOutput;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.item.Item;
@@ -16,6 +17,14 @@ public class kseItemModelProvider extends ItemModelProvider {
 
     @Override
     protected void registerModels() {
+
+        simpleItem(kseItems.IRON_BELL);
+        simpleItem(kseItems.AMETHYST_BELL);
+        simpleItem(kseItems.GLOW_BELL);
+        simpleItem(kseItems.ECHO_BELL);
+        simpleItem(kseItems.WARDEN_TOTEM);
+        simpleItem(kseItems.MURKY_MIRROR);
+
 
     }
 

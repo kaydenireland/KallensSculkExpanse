@@ -5,5 +5,21 @@
   "block.kse.echo_ore": "Echo Ore",
   "block.kse.deepslate_echo_ore": "Deepslate Echo Ore",
   "block.kse.echo_shard_block": "Echo Shard Block",
-  "block.kse.sculked_deepslate": "Sculked Deepslate"
+  "block.kse.sculked_deepslate": "Sculked Deepslate",
+
+  "item.kse.iron_bell": "Iron Bell",
+  "item.kse.amethyst_bell": "Amethyst Bell",
+  "item.kse.glow_bell": "Glow Bell",
+  "item.kse.echo_bell": "Echo Bell",
+
+  "item.kse.warden_totem": "Warden Totem",
+  "item.kse.murky_mirror": "Murky Mirror",
+
+
+  "sounds.kse.amethyst_bell": "Amethyst Bell Rings",
+  "sounds.kse.glow_bell": "Glow Bell Rings",
+  "sounds.kse.echo_bell": "Echo Bell Rings",
+
+  "sounds.kse.bell": "Bell Rings"
+
 }

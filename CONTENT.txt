@@ -8,3 +8,24 @@ Current Features
         - Can be unpacked
 - Sculked Deepslate
     - Crafted with a sculk vein and cobbled deepslate
+- Murky Mirror
+    - Teleports user to spawn point
+    - Long cooldown
+- Warden Totem
+    - When in hand or offhand, will prevent warden from spawning
+    - Resets warden warning / shriek level
+    - Cannot be used when warden is in proximity of player
+    - Totem is consumed on use
+    - Gives invisibility and night vision for short duration after use
+- Bell Item Family
+    - Iron Bell
+        - Makes sound based on the vertical direction of the player
+    - Amethyst Bell
+        - Removes all effects from the player
+        - Long cooldown
+    - Glow Bell
+        - Gives the player a glowing effect for a short duration
+        - Long cooldown
+    - Echo Bell
+        - Gives all entity in a range around the player a glowing effect for a short duration
+        - Reaches out 20 blocks from player in all directions

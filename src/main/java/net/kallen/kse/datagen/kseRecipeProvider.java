@@ -1,6 +1,7 @@
 package net.kallen.kse.datagen;
 
 import net.kallen.kse.block.kseBlocks;
+import net.kallen.kse.item.kseItems;
 import net.kallen.kse.kse;
 import net.minecraft.data.PackOutput;
 import net.minecraft.data.recipes.*;
@@ -40,6 +41,56 @@ public class kseRecipeProvider extends RecipeProvider implements IConditionBuild
                 .requires(Blocks.SCULK_VEIN)
                 .unlockedBy(getHasName(Blocks.COBBLED_DEEPSLATE), has(Blocks.COBBLED_DEEPSLATE))
                 .unlockedBy(getHasName(Blocks.SCULK_VEIN), has(Blocks.SCULK_VEIN))
+                .save(pWriter);
+
+        ShapedRecipeBuilder.shaped(RecipeCategory.BUILDING_BLOCKS, kseItems.IRON_BELL.get())
+                .pattern(" A ")
+                .pattern("A A")
+                .pattern("ABA")
+                .define('A', Items.IRON_INGOT)
+                .define('B', Items.IRON_NUGGET)
+                .unlockedBy(getHasName(Items.IRON_INGOT), has(Items.IRON_INGOT))
+                .unlockedBy(getHasName(Items.IRON_NUGGET), has(Items.IRON_NUGGET))
+                .save(pWriter);
+
+        ShapedRecipeBuilder.shaped(RecipeCategory.BUILDING_BLOCKS, kseItems.AMETHYST_BELL.get())
+                .pattern("AAA")
+                .pattern("ABA")
+                .pattern("AAA")
+                .define('A', Items.AMETHYST_SHARD)
+                .define('B', kseItems.IRON_BELL.get())
+                .unlockedBy(getHasName(Items.AMETHYST_SHARD), has(Items.AMETHYST_SHARD))
+                .unlockedBy(getHasName(kseItems.IRON_BELL.get()), has(kseItems.IRON_BELL.get()))
+                .save(pWriter);
+
+        ShapedRecipeBuilder.shaped(RecipeCategory.BUILDING_BLOCKS, kseItems.GLOW_BELL.get())
+                .pattern("AAA")
+                .pattern("ABA")
+                .pattern("AAA")
+                .define('A', Items.GLOWSTONE)
+                .define('B', kseItems.IRON_BELL.get())
+                .unlockedBy(getHasName(Items.GLOWSTONE), has(Items.GLOWSTONE))
+                .unlockedBy(getHasName(kseItems.IRON_BELL.get()), has(kseItems.IRON_BELL.get()))
+                .save(pWriter);
+
+        ShapedRecipeBuilder.shaped(RecipeCategory.BUILDING_BLOCKS, kseItems.ECHO_BELL.get())
+                .pattern("AAA")
+                .pattern("ABA")
+                .pattern("AAA")
+                .define('A', Items.ECHO_SHARD)
+                .define('B', kseItems.IRON_BELL.get())
+                .unlockedBy(getHasName(Items.ECHO_SHARD), has(Items.ECHO_SHARD))
+                .unlockedBy(getHasName(kseItems.IRON_BELL.get()), has(kseItems.IRON_BELL.get()))
+                .save(pWriter);
+
+        ShapedRecipeBuilder.shaped(RecipeCategory.BUILDING_BLOCKS, Items.EXPERIENCE_BOTTLE)
+                .pattern("AAA")
+                .pattern("ABA")
+                .pattern("AAA")
+                .define('A', Blocks.SCULK)
+                .define('B', Items.GLASS_BOTTLE)
+                .unlockedBy(getHasName(Blocks.SCULK), has(Blocks.SCULK))
+                .unlockedBy(getHasName(Items.GLASS_BOTTLE), has(Items.GLASS_BOTTLE))
                 .save(pWriter);
 
 

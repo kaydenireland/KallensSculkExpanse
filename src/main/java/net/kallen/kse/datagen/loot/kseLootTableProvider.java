@@ -1,7 +1,6 @@
-package net.kallen.kse.datagen;
+package net.kallen.kse.datagen.loot;
 
 
-import net.kallen.kse.datagen.loot.kseBlockLootTables;
 import net.minecraft.data.PackOutput;
 import net.minecraft.data.loot.LootTableProvider;
 import net.minecraft.world.level.storage.loot.parameters.LootContextParamSets;
