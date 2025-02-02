@@ -34,11 +34,12 @@ public class EchoBellItem extends BellItem {
 
             List<Entity> entityList = pLevel.getEntities(pPlayer, targetBox);
             for(Entity entity : entityList){
-                // watch tutorial about adding effect to enemy when hitting it with sword
                 if(entity instanceof LivingEntity livingEntity) {
                     livingEntity.addEffect(new MobEffectInstance(MobEffects.GLOWING, 400));
                 }
             }
+
+            pPlayer.getCooldowns().addCooldown(this, 12000);
 
         }
 

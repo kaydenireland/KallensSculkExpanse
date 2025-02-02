@@ -22,9 +22,9 @@ public class AmethystBellItem extends BellItem {
         if (pLevel.isClientSide) {
 
             pPlayer.removeAllEffects();
+            pPlayer.getCooldowns().addCooldown(this, 12000);
 
         }
-
 
         return InteractionResultHolder.pass(itemInHand);
     }

@@ -2,6 +2,7 @@ package net.kallen.kse;
 
 import com.mojang.logging.LogUtils;
 import net.kallen.kse.block.kseBlocks;
+import net.kallen.kse.event.WardenWarningListener;
 import net.kallen.kse.item.kseCreativeModeTabs;
 import net.kallen.kse.item.kseItems;
 import net.kallen.kse.loot.kseLootModifiers;
@@ -38,6 +39,8 @@ public class kse {
         kseLootModifiers.register(kseEventBus);
 
         kseEventBus.addListener(this::addCreative);
+
+        MinecraftForge.EVENT_BUS.register(WardenWarningListener.class);
     }
 
     private void commonSetup(final FMLCommonSetupEvent event){

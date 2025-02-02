@@ -62,10 +62,6 @@ public class BellItem extends Item {
         return InteractionResultHolder.pass(itemInHand);
     }
 
-    @Override
-    public UseAnim getUseAnimation(ItemStack pStack) {
-        return UseAnim.EAT;
-    }
 
 
 

@@ -22,7 +22,9 @@ public class GlowBellItem extends BellItem {
         ItemStack itemInHand = pPlayer.getItemInHand(pUsedHand);
         if (pLevel.isClientSide) {
 
-            pPlayer.addEffect(new MobEffectInstance(MobEffects.GLOWING, 400));
+            pPlayer.addEffect(new MobEffectInstance(MobEffects.GLOWING, 400,0, true, true));
+            System.out.println(pPlayer.getActiveEffects());
+            pPlayer.getCooldowns().addCooldown(this, 6000);
 
         }
 
