@@ -6,6 +6,7 @@ import net.kallen.kse.event.WardenWarningListener;
 import net.kallen.kse.item.kseCreativeModeTabs;
 import net.kallen.kse.item.kseItems;
 import net.kallen.kse.loot.kseLootModifiers;
+import net.kallen.kse.network.kseNetworking;
 import net.kallen.kse.sound.kseSounds;
 import net.minecraftforge.api.distmarker.Dist;
 import net.minecraftforge.common.MinecraftForge;
@@ -44,6 +45,7 @@ public class kse {
         kseEventBus.addListener(this::addCreative);
 
         MinecraftForge.EVENT_BUS.register(WardenWarningListener.class);
+        kseNetworking.register();
     }
 
     private void commonSetup(final FMLCommonSetupEvent event){

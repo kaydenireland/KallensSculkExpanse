@@ -1,5 +1,7 @@
 package net.kallen.kse.item;
 
+import net.kallen.kse.network.TotemAnimationPacket;
+import net.kallen.kse.network.kseNetworking;
 import net.minecraft.client.Minecraft;
 import net.minecraft.core.particles.ParticleTypes;
 import net.minecraft.network.chat.Component;
@@ -19,6 +21,7 @@ import net.minecraft.world.item.Item;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.Rarity;
 import net.minecraft.world.level.Level;
+import net.minecraftforge.network.PacketDistributor;
 
 import java.util.List;
 
@@ -37,7 +40,9 @@ public class WardenTotemItem extends Item {
         }
 
         // Display Animation
-        Minecraft.getInstance().gameRenderer.displayItemActivation(pStack);
+        //Minecraft.getInstance().gameRenderer.displayItemActivation(pStack);
+        kseNetworking.CHANNEL.send(PacketDistributor.PLAYER.with(() -> pPlayer), new TotemAnimationPacket());
+
 
 
         // Apply effects
