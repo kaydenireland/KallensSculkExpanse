@@ -3,8 +3,13 @@ package net.kallen.kse.item;
 import net.minecraft.client.Minecraft;
 import net.minecraft.core.particles.ParticleTypes;
 import net.minecraft.network.chat.Component;
+import net.minecraft.network.protocol.game.ClientboundAnimatePacket;
+import net.minecraft.server.level.ServerLevel;
 import net.minecraft.server.level.ServerPlayer;
+import net.minecraft.server.network.ServerGamePacketListenerImpl;
 import net.minecraft.sounds.SoundEvents;
+import net.minecraft.world.InteractionHand;
+import net.minecraft.world.InteractionResultHolder;
 import net.minecraft.world.effect.MobEffectInstance;
 import net.minecraft.world.effect.MobEffects;
 import net.minecraft.world.entity.Entity;
@@ -23,6 +28,7 @@ public class WardenTotemItem extends Item {
     }
 
 
+
     public void activate(ServerPlayer pPlayer, ItemStack pStack){
 
         if (isWardenNearby(pPlayer, 48)) {
@@ -30,48 +36,48 @@ public class WardenTotemItem extends Item {
             return;
         }
 
-        if (pStack != null) {
-            // Apply effects
-            pPlayer.addEffect(new MobEffectInstance(MobEffects.INVISIBILITY, 300, 0, false, false));
-            pPlayer.addEffect(new MobEffectInstance(MobEffects.NIGHT_VISION, 600, 0, false, false));
-
-            // Display Animation and Particles TODO
-            Minecraft.getInstance().gameRenderer.displayItemActivation(pStack);
-            spawnTotemParticles(pPlayer);
-
-            // Reset Warden Warning Level to 0
-            pPlayer.getWardenSpawnTracker().get().setWarningLevel(0);
-
-            // Consume the item
-            pStack.shrink(1);
+        // Display Animation
+        Minecraft.getInstance().gameRenderer.displayItemActivation(pStack);
 
 
+        // Apply effects
+        pPlayer.addEffect(new MobEffectInstance(MobEffects.INVISIBILITY, 300, 0, false, false));
+        pPlayer.addEffect(new MobEffectInstance(MobEffects.NIGHT_VISION, 600, 0, false, false));
 
-            // Play a sound (Totem Use Sound)
-            pPlayer.level().playSound(null, pPlayer.blockPosition(),
-                    SoundEvents.TOTEM_USE,
-                    net.minecraft.sounds.SoundSource.PLAYERS,
-                    1.0F, 1.0F);
+        // Spawn Particles
+        spawnTotemParticles(pPlayer);
 
-        }
+        // Reset Warden Warning Level to 0
+        pPlayer.getWardenSpawnTracker().get().setWarningLevel(0);
 
+        // Consume the item
+        pStack.shrink(1);
+
+
+        // Play a sound (Totem Use Sound)
+        pPlayer.level().playSound(null, pPlayer.blockPosition(),
+                SoundEvents.TOTEM_USE,
+                net.minecraft.sounds.SoundSource.PLAYERS,
+                1.0F, 1.0F);
 
 
     }
 
 
     private void spawnTotemParticles(ServerPlayer pPlayer) {
-        Level level = pPlayer.level();
+        ServerLevel level = (ServerLevel) pPlayer.level();
         for (int i = 0; i < 50; i++) {
             double offsetX = (level.random.nextDouble() - 0.5) * 2.0;
             double offsetY = level.random.nextDouble() * 2.0;
             double offsetZ = (level.random.nextDouble() - 0.5) * 2.0;
-            level.addParticle(ParticleTypes.TOTEM_OF_UNDYING,
+            level.sendParticles(ParticleTypes.TOTEM_OF_UNDYING,
                     pPlayer.getX() + offsetX,
                     pPlayer.getY() + offsetY,
                     pPlayer.getZ() + offsetZ,
-                    0, 0, 0);
+                    10,
+                    0, 0, 0, .3);
         }
+
     }
 
     private boolean isWardenNearby(Player pPlayer, double range) {
@@ -87,4 +93,5 @@ public class WardenTotemItem extends Item {
 
 
 
-}
+
+    }

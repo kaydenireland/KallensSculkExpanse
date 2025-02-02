@@ -1,5 +1,6 @@
 package net.kallen.kse.item;
 
+import net.minecraft.client.Minecraft;
 import net.minecraft.world.InteractionHand;
 import net.minecraft.world.InteractionResultHolder;
 import net.minecraft.world.effect.MobEffect;
@@ -19,10 +20,11 @@ public class AmethystBellItem extends BellItem {
     public InteractionResultHolder<ItemStack> use(Level pLevel, Player pPlayer, InteractionHand pUsedHand) {
 
         ItemStack itemInHand = pPlayer.getItemInHand(pUsedHand);
-        if (pLevel.isClientSide) {
+        if (!pLevel.isClientSide) {
 
             pPlayer.removeAllEffects();
             pPlayer.getCooldowns().addCooldown(this, 12000);
+
 
         }
 

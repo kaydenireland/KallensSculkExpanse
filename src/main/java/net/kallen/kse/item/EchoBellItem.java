@@ -26,7 +26,7 @@ public class EchoBellItem extends BellItem {
     public InteractionResultHolder<ItemStack> use(Level pLevel, Player pPlayer, InteractionHand pUsedHand) {
 
         ItemStack itemInHand = pPlayer.getItemInHand(pUsedHand);
-        if (pLevel.isClientSide) {
+        if (!pLevel.isClientSide) {
 
             AABB targetBox = new AABB(pPlayer.getX() + 20, pPlayer.getY() + 20, pPlayer.getZ() + 20,
                     pPlayer.getX() - 20, pPlayer.getY() - 20, pPlayer.getZ() - 20
