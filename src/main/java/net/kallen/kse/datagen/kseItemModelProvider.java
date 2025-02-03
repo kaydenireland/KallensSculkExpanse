@@ -24,7 +24,7 @@ public class kseItemModelProvider extends ItemModelProvider {
         simpleItem(kseItems.ECHO_BELL);
         simpleItem(kseItems.WARDEN_TOTEM);
         simpleItem(kseItems.MURKY_MIRROR);
-
+        simpleItem(kseItems.SCULK_HORN);
 
     }
 

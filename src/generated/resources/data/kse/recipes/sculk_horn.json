@@ -1,0 +1,24 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "building",
+  "key": {
+    "A": {
+      "item": "minecraft:sculk"
+    },
+    "B": {
+      "item": "minecraft:echo_shard"
+    },
+    "C": {
+      "item": "minecraft:goat_horn"
+    }
+  },
+  "pattern": [
+    "ABA",
+    "BCB",
+    "ABA"
+  ],
+  "result": {
+    "item": "kse:sculk_horn"
+  },
+  "show_notification": true
+}

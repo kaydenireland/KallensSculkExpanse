@@ -1,6 +1,7 @@
 package net.kallen.kse.item;
 
 import net.kallen.kse.kse;
+import net.minecraft.sounds.SoundEvents;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.Rarity;
 import net.minecraftforge.eventbus.api.IEventBus;
@@ -25,6 +26,7 @@ public class kseItems {
     public static final RegistryObject<Item> ECHO_BELL = ITEMS.register("echo_bell", () -> new EchoBellItem(new Item.Properties()));
     public static final RegistryObject<Item> WARDEN_TOTEM = ITEMS.register("warden_totem", () -> new WardenTotemItem(new Item.Properties()));
     public static final RegistryObject<Item> MURKY_MIRROR = ITEMS.register("murky_mirror", () -> new MurkyMirrorItem(new Item.Properties()));
+    public static final RegistryObject<Item> SCULK_HORN = ITEMS.register("sculk_horn", () -> new HornItem(new Item.Properties(), SoundEvents.WARDEN_ROAR));
 
 
 

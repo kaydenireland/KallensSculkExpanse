@@ -1,6 +1,7 @@
 TODO
 
 - retexture echo shard block
+- adjust sculk horn texture
 - test echo ore gen rates
 - advancements
 - save cooldown data to world

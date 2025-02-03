@@ -10,4 +10,4 @@ A forge mod aiming to expand upon the Deep Dark
 
 
 
-version 0.1.0
+version 1.0.0
