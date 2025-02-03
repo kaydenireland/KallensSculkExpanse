@@ -29,3 +29,5 @@ Current Features
     - Echo Bell
         - Gives all entity in a range around the player a glowing effect for a short duration
         - Reaches out 20 blocks from player in all directions
+- Sculk Horn
+    - Crafted using a goat horn, echo shards, and sculk

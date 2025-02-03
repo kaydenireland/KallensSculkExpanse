@@ -93,6 +93,17 @@ public class kseRecipeProvider extends RecipeProvider implements IConditionBuild
                 .unlockedBy(getHasName(Items.GLASS_BOTTLE), has(Items.GLASS_BOTTLE))
                 .save(pWriter);
 
+        ShapedRecipeBuilder.shaped(RecipeCategory.BUILDING_BLOCKS, kseItems.SCULK_HORN.get())
+                .pattern("ABA")
+                .pattern("BCB")
+                .pattern("ABA")
+                .define('A', Items.SCULK)
+                .define('B', Items.ECHO_SHARD)
+                .define('C', Items.GOAT_HORN)
+                .unlockedBy(getHasName(Items.SCULK), has(Items.SCULK))
+                .unlockedBy(getHasName(Items.ECHO_SHARD), has(Items.ECHO_SHARD))
+                .unlockedBy(getHasName(Items.GOAT_HORN), has(Items.GOAT_HORN))
+                .save(pWriter);
 
     }
 
