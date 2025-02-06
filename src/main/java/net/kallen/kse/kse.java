@@ -27,8 +27,8 @@ public class kse {
     private static final Logger LOGGER = LogUtils.getLogger();
     
 
-    public kse(FMLJavaModLoadingContext context){
-        IEventBus kseEventBus = context.getModEventBus();
+    public kse(){
+        IEventBus kseEventBus = FMLJavaModLoadingContext.get().getModEventBus();
 
         kseItems.register(kseEventBus);
         kseBlocks.register(kseEventBus);
