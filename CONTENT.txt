@@ -33,3 +33,4 @@ Current Features
     - Crafted using a goat horn, echo shards, and sculk
 - Blindness Potions
     - Brewed with echo shards
+- Echo Shard Armor Trim
