@@ -31,7 +31,7 @@ public class MurkyMirrorItem extends CoolDownItem {
 
             CompoundTag persistentData = serverPlayer.getPersistentData();
 
-            // Get the last cooldown timestamp from NBT
+
             long lastUsedTime = persistentData.getLong(COOLDOWN_TAG);
             long currentTime = serverPlayer.level().getGameTime();
 

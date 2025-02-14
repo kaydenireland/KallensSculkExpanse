@@ -5,7 +5,6 @@ import net.kallen.kse.item.CoolDownItem;
 import net.kallen.kse.item.kseItems;
 import net.minecraft.nbt.CompoundTag;
 import net.minecraft.server.level.ServerPlayer;
-import net.minecraft.world.item.Item;
 import net.minecraftforge.event.entity.player.PlayerEvent;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
 import net.minecraftforge.fml.common.Mod;
@@ -14,9 +13,24 @@ import net.minecraftforge.registries.RegistryObject;
 @Mod.EventBusSubscriber
 public class PlayerEventHandler {
 
-    private static final String[] COOLDOWN_TAGS = {"MirrorCooldown"};
-    private static final int[] COOLDOWN_TIMES = {18000}; // Ensure it matches the item cooldown
-    private static final RegistryObject[] COOLDOWN_ITEMS = {kseItems.MURKY_MIRROR};
+    private static final String[] COOLDOWN_TAGS = {
+            "MirrorCooldown",
+            "AmethystBellCooldown",
+            "EchoBellCooldown",
+            "GlowBellCooldown"
+    };
+    private static final int[] COOLDOWN_TIMES = {
+            18000,
+            6000,
+            6000,
+            3000
+    }; // Ensure it matches the item cooldown
+    private static final RegistryObject[] COOLDOWN_ITEMS = {
+            kseItems.MURKY_MIRROR,
+            kseItems.AMETHYST_BELL,
+            kseItems.ECHO_BELL,
+            kseItems.GLOW_BELL
+    };
 
     @SubscribeEvent
     public static void onPlayerLogin(PlayerEvent.PlayerLoggedInEvent event) {
