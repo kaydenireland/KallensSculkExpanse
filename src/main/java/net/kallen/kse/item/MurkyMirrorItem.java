@@ -12,7 +12,7 @@ import net.minecraft.world.item.Item;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.level.Level;
 
-public class MurkyMirrorItem extends Item {
+public class MurkyMirrorItem extends CoolDownItem {
 
 
     private static final String COOLDOWN_TAG = "MirrorCooldown";
@@ -35,17 +35,9 @@ public class MurkyMirrorItem extends Item {
             long lastUsedTime = persistentData.getLong(COOLDOWN_TAG);
             long currentTime = serverPlayer.level().getGameTime();
 
-            System.out.println("Current: " + currentTime + ", Last Used: " + lastUsedTime);
             if ((currentTime < lastUsedTime + COOLDOWN_TIME) && lastUsedTime > 0) {
                 return InteractionResultHolder.fail(serverPlayer.getItemInHand(pUsedHand));
             }
-
-
-
-
-
-
-
 
             BlockPos spawnPos = serverPlayer.getRespawnPosition();
             if (spawnPos != null) {
@@ -73,9 +65,13 @@ public class MurkyMirrorItem extends Item {
         return InteractionResultHolder.pass(itemInHand);
     }
 
-    public static void applyCooldown(ServerPlayer serverPlayer, int coolDownTime){
-        serverPlayer.getCooldowns().addCooldown(kseItems.MURKY_MIRROR.get(), coolDownTime);
+
+    @Override
+    public void applyCooldown(ServerPlayer serverPlayer, int coolDownTime){
+        serverPlayer.getCooldowns().addCooldown(this, coolDownTime);
     }
+
+
 
 
 }
