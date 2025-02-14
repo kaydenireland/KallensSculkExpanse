@@ -1,7 +1,7 @@
 package net.kallen.kse.event;
 
 
-import net.kallen.kse.item.CoolDownItem;
+import net.kallen.kse.item.custom.CoolDownItem;
 import net.kallen.kse.item.kseItems;
 import net.minecraft.nbt.CompoundTag;
 import net.minecraft.server.level.ServerPlayer;

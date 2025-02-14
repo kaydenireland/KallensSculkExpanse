@@ -1,13 +1,9 @@
 package net.kallen.kse.event;
 
 
-import net.kallen.kse.item.WardenTotemItem;
-import net.kallen.kse.item.kseItems;
+import net.kallen.kse.item.custom.WardenTotemItem;
 import net.minecraft.server.level.ServerPlayer;
-import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.item.Item;
-import net.minecraft.world.item.ItemStack;
-import net.minecraft.world.item.Items;
 import net.minecraftforge.event.entity.living.LivingEvent;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
 import net.minecraftforge.fml.common.Mod;

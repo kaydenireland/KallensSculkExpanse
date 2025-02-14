@@ -6,11 +6,16 @@ import net.kallen.kse.event.PlayerEventHandler;
 import net.kallen.kse.event.WardenWarningListener;
 import net.kallen.kse.item.kseCreativeModeTabs;
 import net.kallen.kse.item.kseItems;
+import net.kallen.kse.item.potion.BetterBrewingRecipe;
+import net.kallen.kse.item.potion.ksePotions;
 import net.kallen.kse.loot.kseLootModifiers;
 import net.kallen.kse.network.kseNetworking;
 import net.kallen.kse.sound.kseSounds;
+import net.minecraft.world.item.Items;
+import net.minecraft.world.item.alchemy.Potions;
 import net.minecraftforge.api.distmarker.Dist;
 import net.minecraftforge.common.MinecraftForge;
+import net.minecraftforge.common.brewing.BrewingRecipeRegistry;
 import net.minecraftforge.event.BuildCreativeModeTabContentsEvent;
 import net.minecraftforge.event.server.ServerStartingEvent;
 import net.minecraftforge.eventbus.api.IEventBus;
@@ -34,6 +39,7 @@ public class kse {
         kseItems.register(kseEventBus);
         kseBlocks.register(kseEventBus);
         kseCreativeModeTabs.register((kseEventBus));
+        ksePotions.register(kseEventBus);
 
         kseSounds.register(kseEventBus);
 
@@ -51,7 +57,11 @@ public class kse {
     }
 
     private void commonSetup(final FMLCommonSetupEvent event){
-        
+
+        BrewingRecipeRegistry.addRecipe(new BetterBrewingRecipe(Potions.AWKWARD, Items.ECHO_SHARD, ksePotions.BLINDNESS_POTION.get()));
+        BrewingRecipeRegistry.addRecipe(new BetterBrewingRecipe(ksePotions.BLINDNESS_POTION.get(), Items.REDSTONE, ksePotions.EXTENDED_BLINDNESS_POTION.get()));
+
+
     }
 
     // Add the example block item to the building blocks tab
