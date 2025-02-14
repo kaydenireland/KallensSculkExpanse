@@ -1,6 +1,7 @@
 package net.kallen.kse.item;
 
 import net.minecraft.core.BlockPos;
+import net.minecraft.nbt.CompoundTag;
 import net.minecraft.server.level.ServerPlayer;
 import net.minecraft.sounds.SoundEvents;
 import net.minecraft.sounds.SoundSource;
@@ -12,6 +13,12 @@ import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.level.Level;
 
 public class MurkyMirrorItem extends Item {
+
+
+    private static final String COOLDOWN_TAG = "MirrorCooldown";
+    private static final int COOLDOWN_TIME = 18000;
+
+
     public MurkyMirrorItem(Properties pProperties) {
         super(pProperties.stacksTo(1));
     }
@@ -21,6 +28,25 @@ public class MurkyMirrorItem extends Item {
 
         ItemStack itemInHand = pPlayer.getItemInHand(pUsedHand);
         if (!pLevel.isClientSide && pPlayer instanceof ServerPlayer serverPlayer) { // Ensure server-side execution
+
+            CompoundTag persistentData = serverPlayer.getPersistentData();
+
+            // Get the last cooldown timestamp from NBT
+            long lastUsedTime = persistentData.getLong(COOLDOWN_TAG);
+            long currentTime = serverPlayer.level().getGameTime();
+
+            System.out.println("Current: " + currentTime + ", Last Used: " + lastUsedTime);
+            if ((currentTime < lastUsedTime + COOLDOWN_TIME) && lastUsedTime > 0) {
+                return InteractionResultHolder.fail(serverPlayer.getItemInHand(pUsedHand));
+            }
+
+
+
+
+
+
+
+
             BlockPos spawnPos = serverPlayer.getRespawnPosition();
             if (spawnPos != null) {
                 // Teleport the player safely
@@ -36,13 +62,20 @@ public class MurkyMirrorItem extends Item {
                 serverPlayer.teleportTo(spawnPos.getX() + 0.5, spawnPos.getY(), spawnPos.getZ() + 0.5);
             }
 
-            serverPlayer.getCooldowns().addCooldown(this, 18000);
+            persistentData.putLong(COOLDOWN_TAG, currentTime);
+            serverPlayer.getCooldowns().addCooldown(this, COOLDOWN_TIME);
             return InteractionResultHolder.success(itemInHand);
 
         }
 
-        
+
 
         return InteractionResultHolder.pass(itemInHand);
     }
+
+    public static void applyCooldown(ServerPlayer serverPlayer, int coolDownTime){
+        serverPlayer.getCooldowns().addCooldown(kseItems.MURKY_MIRROR.get(), coolDownTime);
+    }
+
+
 }
