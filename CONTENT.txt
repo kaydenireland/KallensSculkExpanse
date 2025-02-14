@@ -31,3 +31,5 @@ Current Features
         - Reaches out 20 blocks from player in all directions
 - Sculk Horn
     - Crafted using a goat horn, echo shards, and sculk
+- Blindness Potions
+    - Brewed with echo shards
