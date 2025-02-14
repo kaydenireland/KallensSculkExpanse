@@ -1,9 +1,10 @@
-// 1.20.1	2025-02-02T13:34:49.0815752	Recipes
+// 1.20.1	2025-02-02T18:53:40.8426842	Recipes
 ba3f43fafdc785aded14f39937e5feaf3e5cde1e data/kse/advancements/recipes/building_blocks/amethyst_bell.json
 db8c01589736ecb5f89fe01fddb1794c866bfd18 data/kse/advancements/recipes/building_blocks/echo_bell.json
 0047d67a450091c81251f528ec53b6854a764979 data/kse/advancements/recipes/building_blocks/echo_shard_block.json
 cc9380de15508933d0987c1e6be212d669a1dcb6 data/kse/advancements/recipes/building_blocks/glow_bell.json
 07029646a57dc42c944f6a6e8950db55c63184a0 data/kse/advancements/recipes/building_blocks/iron_bell.json
+276156912b83a924151be32e5272300fb90e344b data/kse/advancements/recipes/building_blocks/sculk_horn.json
 795cbda11d2988021cdde3286612c2ec922a069e data/kse/advancements/recipes/misc/echo_shard_from_blasting_deepslate_echo_ore.json
 fdf7b6be03bf2c45e17ad22c350bd822fab9b667 data/kse/advancements/recipes/misc/echo_shard_from_blasting_echo_ore.json
 9de3601c8e4987269b853fb3b533a66f0bfa6474 data/kse/advancements/recipes/misc/echo_shard_from_smelting_deepslate_echo_ore.json
@@ -19,6 +20,7 @@ ba8813be155fdc5d0d1df46ea26d5a0dc92ea053 data/kse/recipes/echo_shard_from_smelti
 638708ecf865f8d96ce5535aa7860c8a7e655967 data/kse/recipes/glow_bell.json
 dd764873274ac5d6ffdbdf786e053f3bd4e1d06e data/kse/recipes/iron_bell.json
 a8d4bb49cc10b91dc35f4051051dd74c8b2485a4 data/kse/recipes/sculked_deepslate.json
+dfed05eb91cd46b3f6271906b62cab2f9e1c6f59 data/kse/recipes/sculk_horn.json
 eef50727cad4e03433fc087102e787536548a284 data/minecraft/advancements/recipes/building_blocks/echo_shard_unpacked.json
 35d3a58391e3bb17cea99c6750990b0ea9767f97 data/minecraft/advancements/recipes/building_blocks/experience_bottle.json
 7649773623dbdd545060fd32072ebcee06066820 data/minecraft/recipes/echo_shard_unpacked.json
