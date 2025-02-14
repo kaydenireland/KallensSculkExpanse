@@ -1,4 +1,4 @@
-package net.kallen.kse.item;
+package net.kallen.kse.item.custom;
 
 import net.minecraft.server.level.ServerPlayer;
 import net.minecraft.world.item.Item;

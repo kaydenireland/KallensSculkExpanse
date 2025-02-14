@@ -22,6 +22,17 @@
   "sounds.kse.glow_bell": "Glow Bell Rings",
   "sounds.kse.echo_bell": "Echo Bell Rings",
 
-  "sounds.kse.bell": "Bell Rings"
+  "sounds.kse.bell": "Bell Rings",
+
+  "item.minecraft.potion.effect.blindness_potion": "Blindness Potion",
+  "item.minecraft.splash_potion.effect.blindness_potion": "Blindness Splash Potion",
+  "item.minecraft.lingering_potion.effect.blindness_potion": "Blindness Lingering Potion",
+  "item.minecraft.tipped_arrow.effect.blindness_potion": "Blindness Tipped Arrow",
+
+  "item.minecraft.potion.effect.extended_blindness_potion": "Blindness Potion",
+  "item.minecraft.splash_potion.effect.extended_blindness_potion": "Blindness Splash Potion",
+  "item.minecraft.lingering_potion.effect.extended_blindness_potion": "Blindness Lingering Potion",
+  "item.minecraft.tipped_arrow.effect.extended_blindness_potion": "Blindness Tipped Arrow"
+
 
 }
