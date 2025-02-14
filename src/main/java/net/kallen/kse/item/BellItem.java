@@ -11,7 +11,7 @@ import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.UseAnim;
 import net.minecraft.world.level.Level;
 
-public class BellItem extends Item {
+public class BellItem extends CoolDownItem {
     public BellItem(Properties pProperties) {
         super(pProperties.stacksTo(1));
     }
