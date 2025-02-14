@@ -25,12 +25,10 @@ public class HornItem extends Item {
     public InteractionResultHolder<ItemStack> use(Level pLevel, Player pPlayer, InteractionHand hand) {
         ItemStack stack = pPlayer.getItemInHand(hand);
 
-        if (pLevel.isClientSide) {
-            if (!pPlayer.isUsingItem() && !pPlayer.getCooldowns().isOnCooldown(stack.getItem())) {
-                pPlayer.startUsingItem(hand);
-                pPlayer.playSound(sound, 1.0F, 1.0F);
-                pPlayer.getCooldowns().addCooldown(this, 100);
-            }
+        if (!pPlayer.isUsingItem() && !pPlayer.getCooldowns().isOnCooldown(stack.getItem())) {
+            pPlayer.startUsingItem(hand);
+            pPlayer.playSound(sound, 1.0F, 1.0F);
+            pPlayer.getCooldowns().addCooldown(this, 100);
         }
 
         return InteractionResultHolder.success(stack);
@@ -43,7 +41,7 @@ public class HornItem extends Item {
 
     @Override
     public int getUseDuration(ItemStack stack) {
-        return 60;
+        return 40;
     }
 
 
