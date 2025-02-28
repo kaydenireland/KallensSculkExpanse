@@ -32,7 +32,9 @@
   "item.minecraft.potion.effect.extended_blindness_potion": "Blindness Potion",
   "item.minecraft.splash_potion.effect.extended_blindness_potion": "Blindness Splash Potion",
   "item.minecraft.lingering_potion.effect.extended_blindness_potion": "Blindness Lingering Potion",
-  "item.minecraft.tipped_arrow.effect.extended_blindness_potion": "Blindness Tipped Arrow"
+  "item.minecraft.tipped_arrow.effect.extended_blindness_potion": "Blindness Tipped Arrow",
+
+  "trim_material.kse.echo_shard": "Echo Shard Material"
 
 
 }

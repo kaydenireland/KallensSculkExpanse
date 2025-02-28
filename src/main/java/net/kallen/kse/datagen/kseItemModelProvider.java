@@ -2,13 +2,24 @@ package net.kallen.kse.datagen;
 
 import net.kallen.kse.kse;
 import net.kallen.kse.item.kseItems;
+import net.minecraft.Util;
 import net.minecraft.data.PackOutput;
+import net.minecraft.data.models.ItemModelGenerators;
+import net.minecraft.resources.ResourceKey;
 import net.minecraft.resources.ResourceLocation;
+import net.minecraft.server.packs.PackType;
+import net.minecraft.world.item.ArmorItem;
 import net.minecraft.world.item.Item;
+import net.minecraft.world.item.Items;
+import net.minecraft.world.item.armortrim.TrimMaterial;
+import net.minecraft.world.item.armortrim.TrimMaterials;
 import net.minecraftforge.client.model.generators.ItemModelBuilder;
 import net.minecraftforge.client.model.generators.ItemModelProvider;
+import net.minecraftforge.client.model.generators.ModelFile;
 import net.minecraftforge.common.data.ExistingFileHelper;
 import net.minecraftforge.registries.RegistryObject;
+
+import java.util.LinkedHashMap;
 
 public class kseItemModelProvider extends ItemModelProvider {
     public kseItemModelProvider(PackOutput output, ExistingFileHelper existingFileHelper) {
@@ -26,6 +37,7 @@ public class kseItemModelProvider extends ItemModelProvider {
         simpleItem(kseItems.MURKY_MIRROR);
         simpleItem(kseItems.SCULK_HORN);
 
+
     }
 
 
@@ -34,6 +46,10 @@ public class kseItemModelProvider extends ItemModelProvider {
                 new ResourceLocation("item/generated")).texture("layer0",
                 new ResourceLocation(kse.MOD_ID,"item/" + item.getId().getPath()));
     }
+
+
+
+
 
 
 }
